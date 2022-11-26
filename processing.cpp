@@ -8,7 +8,7 @@ int processing(queue &my_queue){
 	int mode;
 	do{
 		cout << "[0] вставить в очередь\n"
-			<< "[1]  удалить из очереди\n "
+			<< "[1]  удалить из очереди\n"
 			<< "[2]  вывести очередь\n";
 		getInt(mode, "enter mode -> ");
 		if(mode == 0){
@@ -63,6 +63,10 @@ void getInt(int &val, const char *txt){
 		cout << err;
 		cout << txt;
 		cin >> val;
+		if(cin.eof()){
+			val =  -1;
+			return;
+		}
 		if(cin.good()){
 			flag = 0;
 		}

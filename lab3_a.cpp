@@ -11,7 +11,7 @@ item::item(double double_in, string string_in){
 
 item::item(){
 	double_val = 0;
-	string_val;
+	string_val = "";
 }
 
 queue::queue(){
